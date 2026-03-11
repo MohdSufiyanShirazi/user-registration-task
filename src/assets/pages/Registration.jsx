@@ -23,7 +23,7 @@ const Registration = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    const existingRegistrations = JSON.parse(localStorage.getItem('userRegistrations')) || JSON.parse(localStorage.getItem('customerRegistrations')) || [];
+    const existingRegistrations = JSON.parse(localStorage.getItem('userRegistrations')) || [];
     
     const newRegistration = {
       ...formData,

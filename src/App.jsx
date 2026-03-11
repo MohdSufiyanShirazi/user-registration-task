@@ -6,22 +6,22 @@ import AdminNavBar from './assets/admin/AdminNavBar';
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(false);
-  const [isCustomer, setIsCustomer] = useState(false);
+  const [isUser, setIsUser] = useState(false);
 
   useEffect(() => {
     // Check sessionStorage for user role
     const adminStatus = sessionStorage.getItem('isAdmin') === 'true';
-    const customerStatus = sessionStorage.getItem('isCustomer') === 'true';
+    const userStatus = sessionStorage.getItem('isUser') === 'true';
 
     setIsAdmin(adminStatus);
-    setIsCustomer(customerStatus);
+    setIsUser(userStatus);
   }, []);
 
   return (
      <HashRouter>
          {isAdmin && <AdminNavBar/>}
-         {isCustomer && <CustomerNavBar/>}
-         {!isAdmin  && !isCustomer && <NavBar/>}
+         {isUser && <NavBar/>}
+         {!isAdmin && !isUser && <NavBar/>}
      </HashRouter>
   );
 }

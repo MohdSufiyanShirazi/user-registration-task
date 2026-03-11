@@ -6,7 +6,7 @@ export default function ViewUsers() {
   const [deleteMessage, setDeleteMessage] = useState('');
 
   useEffect(() => {
-    const storedUsers = JSON.parse(localStorage.getItem('userRegistrations')) || JSON.parse(localStorage.getItem('customerRegistrations')) || [];
+    const storedUsers = JSON.parse(localStorage.getItem('userRegistrations')) || [];
     setUsers(storedUsers);
   }, []);
 
