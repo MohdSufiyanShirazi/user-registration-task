@@ -20,7 +20,7 @@ function App() {
   return (
      <HashRouter>
          {isAdmin && <AdminNavBar/>}
-         {isUser && <NavBar/>}
+  
          {!isAdmin && !isUser && <NavBar/>}
      </HashRouter>
   );
