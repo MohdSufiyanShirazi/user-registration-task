@@ -3,7 +3,7 @@ import './admin.css';
 import AdminHome from './AdminHome';
 import ViewUsers from './ViewUsers.jsx';
 import AdminLogout from './AdminLogout';
-import Api from './api/api';
+import Api from '../api/Api';
 
 export default function AdminNavBar() {
   const navigate = useNavigate();
