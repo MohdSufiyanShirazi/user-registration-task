@@ -10,7 +10,7 @@ export default function AdminNavBar() {
 
   const handleLogout = () => {
     sessionStorage.removeItem('isAdmin');
-    navigate('/');
+    navigate('/admin/home');
     window.location.reload();
   };
 
