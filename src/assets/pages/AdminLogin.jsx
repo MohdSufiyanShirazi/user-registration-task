@@ -26,8 +26,8 @@ const AdminLogin = () => {
     const adminCredentials = JSON.parse(sessionStorage.getItem('adminCredentials'));
     
     // Default admin credentials if not found in sessionStorage
-    const defaultUsername = 'admin';
-    const defaultPassword = 'admin';
+    const defaultUsername = 'random ';
+    const defaultPassword = 'random';
     
     const validUsername = adminCredentials?.username || defaultUsername;
     const validPassword = adminCredentials?.password || defaultPassword;
@@ -59,7 +59,7 @@ const AdminLogin = () => {
       <div className="login-card">
         <h1>Admin Login</h1>
         <p style={{ textAlign: 'center', fontSize: '12px', color: '#666', marginBottom: '15px' }}>
-          Demo Credentials - Username: admin | Password: admin
+          Demo Credentials - Username: random  | Password: random
         </p>
         {error && <div className="error-message" style={{ color: 'red', marginBottom: '10px', padding: '10px', backgroundColor: '#ffe6e6', borderRadius: '4px' }}>{error}</div>}
         <form onSubmit={handleSubmit} className="login-form">
