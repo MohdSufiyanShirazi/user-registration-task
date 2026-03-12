@@ -11,7 +11,10 @@ export default function AdminNavBar() {
   const handleLogout = () => {
     sessionStorage.removeItem('isAdmin');
     navigate('');
-    window.location.reload();
+    // Redirect to home page
+      setTimeout(() => {
+        window.location.href = '#/admin/home';
+      }, 500);
   };
 
   return (
