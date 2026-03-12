@@ -26,7 +26,7 @@ const AdminLogin = () => {
     const adminCredentials = JSON.parse(sessionStorage.getItem('adminCredentials'));
     
     // Default admin credentials if not found in sessionStorage
-    const defaultUsername = 'random ';
+    const defaultUsername = 'random';
     const defaultPassword = 'random';
     
     const validUsername = adminCredentials?.username || defaultUsername;
